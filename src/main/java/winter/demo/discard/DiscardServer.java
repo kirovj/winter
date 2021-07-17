@@ -1,4 +1,4 @@
-package winter.server;
+package winter.demo.discard;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -8,8 +8,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import winter.server.handler.DiscardServerHandler;
-import winter.server.handler.TimeServerHandler;
+import winter.demo.time.TimeServerHandler;
 
 /**
  * @author kirovj
@@ -45,8 +44,7 @@ public class DiscardServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) {
-//                            ch.pipeline().addLast(new DiscardServerHandler());
-                            ch.pipeline().addLast(new TimeServerHandler());
+                            ch.pipeline().addLast(new DiscardServerHandler());
                         }
                     })
                     // 你可以设置这里指定的 Channel 实现的配置参数

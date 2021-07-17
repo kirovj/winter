@@ -1,4 +1,4 @@
-package winter.server.handler;
+package winter.demo.discard;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

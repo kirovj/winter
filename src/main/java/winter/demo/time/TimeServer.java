@@ -14,7 +14,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @date 2021/7/17 11:41
  */
 public class TimeServer {
-    private int port;
+    private final int port;
 
     public TimeServer(int port) {
         this.port = port;

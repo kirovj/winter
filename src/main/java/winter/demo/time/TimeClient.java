@@ -16,8 +16,8 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class TimeClient {
 
     public static void main(String[] args) throws InterruptedException {
-        String host = args[0];
-        int port = Integer.parseInt(args[1]);
+        String host = "127.0.0.1";
+        int port = 8080;
 
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
@@ -33,7 +33,7 @@ public class TimeClient {
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new TimeClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
                 }
             });
 

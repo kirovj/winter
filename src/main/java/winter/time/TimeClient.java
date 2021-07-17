@@ -1,4 +1,4 @@
-package winter.demo.time;
+package winter.time;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

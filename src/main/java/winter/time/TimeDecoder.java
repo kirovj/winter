@@ -1,4 +1,4 @@
-package winter.demo.time;
+package winter.time;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

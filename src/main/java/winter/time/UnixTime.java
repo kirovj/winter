@@ -1,4 +1,4 @@
-package winter.demo.time;
+package winter.time;
 
 import java.util.Date;
 

@@ -16,7 +16,7 @@ public class TestByteBuffer {
     public static void main(String[] args) {
         // FileChannel
         // 1.In/OutputStream 2. RandomAccessFile
-        try(var channel = new FileInputStream("data.txt").getChannel()) {
+        try(var channel = new FileInputStream("file/c1/data.txt").getChannel()) {
             // 准备缓冲区
             var buffer = ByteBuffer.allocate(10);
             // 从 channel 中读取数据，向缓冲区 buffer 写入, 当len为-1时没有读取结束

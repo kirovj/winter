@@ -26,7 +26,7 @@ public class TestByteBuffer {
 
                 log.warn("read len: {}", len);
                 // 输出 buffer 的内容
-                buffer.flip(); // 切换的buffer的读模式
+                buffer.flip(); // 切换到buffer的读模式 limit -> pos; pos -> 0;
 
                 // 检查是否剩余
                 while (buffer.hasRemaining()) {
@@ -34,7 +34,7 @@ public class TestByteBuffer {
                     log.debug("result: {}", (char) b);
                 }
 
-                buffer.clear(); // 切换到写模式
+                buffer.clear(); // 切换到写模式 pos -> 0; limit -> capacity
                 len = channel.read(buffer);
             }
 
